@@ -7,7 +7,7 @@ def fetch_anime_data(query):
     # Endpoint anime searcha
     endpoint = f"search/anime?q={query}&page=1"
 
-    # Make a GET request to the anime API.
+    # GET response za API
     response = requests.get(base_url + endpoint)
 
     if response.status_code == 200:
@@ -25,7 +25,7 @@ def fetch_manga_data(query):
     # Konstruisan endpint
     endpoint = f"manga?title={query}"
 
-    # Make a GET request to the manga API.
+    # GET response za API
     response = requests.get(base_url + endpoint)
 
     if response.status_code == 200:
