@@ -93,7 +93,7 @@ class RateAnime(models.Model):
     score = models.FloatField()
 
     class Meta:
-        # Koristno za reprezentovanje 2 kolone zajedno u primary key
+        # Korisno za reprezentovanje 2 kolone zajedno u primary key
         unique_together = (('user', 'anime'), )
         managed = False
 
@@ -104,7 +104,7 @@ class WatchStatus(models.Model):
     status = models.IntegerField()
 
     class Meta:
-        # Koristno za reprezentovanje 2 kolone zajedno u primary key
+        # Korisno za reprezentovanje 2 kolone zajedno u primary key
         unique_together = (('user', 'anime'), )
         managed = False
 
