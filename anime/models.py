@@ -62,50 +62,7 @@ class User(models.Model):
 
     def get_absolute_url(self):
         return reverse('user', args=[str(self.id)])
-
-# class User(models.Model):
-#     # User bi trebao da ima ID za primary key za sigurnost,korisnost mada i email moze biti primary key
-#     email = models.EmailField(verbose_name='Email', primary_key=True)
-#     username = models.CharField(max_length=255)
-#     password = models.CharField(max_length=255)
-#     # TODO: User avatar
-#     # avatar = models.ImageField(blank=True, null=True)
-#     gender = models.CharField(max_length=10, blank=True, null=True)
-
-#     likeStudio = models.ManyToManyField(
-#         'Studio',
-#         help_text='Users like what studios',
-#         related_name='liked_by_users',
-#     )
-#     likeAuthor = models.ManyToManyField(
-#         'Author',
-#         help_text='Users like what authors',
-#         related_name='liked_by_users',
-#     )
-#     likeAnime = models.ManyToManyField(
-#         'Anime',
-#         help_text='Users like what anime',
-#         related_name='liked_by_users',
-#     )
-#     likeTag = models.ManyToManyField('Tag')
-#     likeEpisode = models.ManyToManyField('Episode')
-#     likeChapter = models.ManyToManyField('Chapter')
-#     likeManga = models.ManyToManyField(
-#         'Manga',
-#         help_text='Users like what manga',
-#         related_name='liked_by_users',
-#     )
     
-#     likeChapter = models.ManyToMany('')
-#     class Meta:
-#         managed = False
-
-#     def __str__(self):
-#         return self.username
-
-#     def get_absolute_url(self):
-#         return reverse('user', args=[str(self.id)])
-
 class Anime(models.Model):
     name = models.CharField(
         max_length=255, primary_key=True, verbose_name='AnimeName')
